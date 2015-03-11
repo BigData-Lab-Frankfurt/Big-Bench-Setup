@@ -10,5 +10,6 @@ rm -rf $log_path/*
 
 output "Clean up Big-Bench result tables..."
 $bigbench_dir/bin/bigBench cleanQueries
+$bigbench_dir/bin/bigBench cleanQueries -e spark
 
 output "Done."
