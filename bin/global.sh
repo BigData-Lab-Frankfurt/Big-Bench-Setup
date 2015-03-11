@@ -22,5 +22,5 @@ bigbench_db="bigbenchorc"
 
 	# settings
 
-queries=(6 7 9 11 12 13 14 15 17 21 22 23 24)
+queries=(3 6 7 8 9 11 12 13 14 15 17 21 22 23 24 29)
 engines=("hive" "spark")
