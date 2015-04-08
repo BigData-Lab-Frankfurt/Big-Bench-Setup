@@ -5,11 +5,25 @@ current_dir="$(dirname "$0")"
 source "$current_dir/global.sh"
 
 
+table_type="$1"
+
+re='^source$'
+if [[ $table_type =~ $re ]] ; then
+    # Negate table filter regex
+  grep_params="-v"
+else
+    # Default
+  table_type="result"
+  grep_params=""
+fi
+
+output "Chosen table type: $table_type"
+
 results_file="$log_path/bigbench-results_$(date +'%Y-%m-%d_%H-%M-%S').csv"
 touch $results_file
 
-output "Scanning for result tables in database '$bigbench_db'..."
-tables=$(hive -e "SHOW TABLES;" -S --database $bigbench_db | grep "^q.*_result")
+output "Scanning for $table_type tables in database '$bigbench_db'..."
+tables=$(hive -e "SHOW TABLES;" -S --database $bigbench_db | grep $grep_params "^q.*_result")
 readarray -t tables_array <<<"$tables"
 output "Found tables: $(echo $tables)"
 
