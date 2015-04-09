@@ -23,7 +23,7 @@ results_file="$log_path/bigbench-results_$(date +'%Y-%m-%d_%H-%M-%S').csv"
 touch $results_file
 
 output "Scanning for $table_type tables in database '$bigbench_db'..."
-tables=$(hive -e "SHOW TABLES;" -S --database $bigbench_db | grep $grep_params "^q.*_result")
+tables=$(hive -e "SHOW TABLES;" -S --database $bigbench_db | grep -Ev "WARN.*DEPRECATED" | grep $grep_params "^q.*_result")
 readarray -t tables_array <<<"$tables"
 output "Found tables: $(echo $tables)"
 
