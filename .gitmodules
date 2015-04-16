@@ -1,6 +1,6 @@
-[submodule "Big-Bench"]
-	path = Big-Bench
-	url = https://github.com/BigData-Lab-Frankfurt/Big-Bench.git
 [submodule "parse-big-bench"]
 	path = parse-big-bench
 	url = https://bitbucket.org/mxbeer/parse-big-bench.git
+[submodule "Big-Bench"]
+	path = Big-Bench
+	url = https://github.com/BigData-Lab-Frankfurt/Big-Bench
