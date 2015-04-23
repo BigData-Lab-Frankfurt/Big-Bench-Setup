@@ -28,7 +28,7 @@ mvn clean package
 
 Use scripts in bin directory to execute queries, generate your times csv (parse-big-bench) or to collect results from Big-Bench results tables.
 
-## Validation
+## Validation reference
 
 This section should serve as reference for validating source tables and query results. Row counts of the various tables can be found for the scale factors 100, 300, 600 and 1000.
 
