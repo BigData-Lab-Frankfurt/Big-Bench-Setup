@@ -1,4 +1,4 @@
-# Big-Bench-Setup
+# Big-Bench-TPCx-BB
 This repository just represents our Big-Bench setup.
 
 ## Installation
