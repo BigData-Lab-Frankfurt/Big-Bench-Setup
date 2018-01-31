@@ -113,5 +113,3 @@ This section should serve as reference for validating source tables and query re
 _* Q5, Q20, Q25, Q26, Q28: Query result is not a table but a file._
 
 _* * Q10, Q18, Q19, Q27: Query result is not predictable and depends on each individual data generation because of text processing._
-
-Push test from Matteo.
