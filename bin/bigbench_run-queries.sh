@@ -9,6 +9,8 @@ output "Starting..."
 output "Configured engines: $(echo ${engines[@]})"
 output "Configured queries: $(echo ${queries[@]})"
 
+$bigbench_dir/bin/bigBench cleanLogs -U
+
 for engine in "${engines[@]}"
 do
 
