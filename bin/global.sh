@@ -13,14 +13,17 @@ function output {
 	# constants
 
 setup_dir="$current_dir/.."
-bigbench_dir="$setup_dir/Big-Bench"
+bigbench_dir="$setup_dir/Big-Data-Benchmark-for-Big-Bench/"
 parsebigbench_dir="$setup_dir/parse-big-bench"
 log_path="$bigbench_dir/logs"
 
 bigbench_db="bigbenchorc"
 
+export BIG_BENCH_HOME="/home/user1/Big-Bench-Setup/Big-Data-Benchmark-for-Big-Bench"
 
 	# settings
 
-queries=(3 6 7 8 9 11 12 13 14 15 17 21 22 23 24 29)
-engines=("hive" "spark")
+#queries=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30)
+queries=(3)
+#engines=("hive" "spark")
+engines=("hive")
