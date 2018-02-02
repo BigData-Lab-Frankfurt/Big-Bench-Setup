@@ -16,7 +16,7 @@ do
   do
     output "Executing query '$query' (Engine: '$engine')..."
 
-    $bigbench_dir/bin/bigBench runQuery -e $engine -q $query
+    $bigbench_dir/bin/bigBench runQuery -e $engine -q $query -m 8 -U
 
   done
 
