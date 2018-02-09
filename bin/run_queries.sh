@@ -6,7 +6,7 @@ source "$current_dir/global.sh"
 
 
 output "Starting..."
-output "Configured engines: $(echo ${BIG_BENCH_DEFAULT_ENGINE})"
+output "Configured engine: $(echo ${BIG_BENCH_DEFAULT_ENGINE})"
 output "Configured queries: $(echo ${queries[@]})"
 
 $bigbench_dir/bin/bigBench cleanLogs -U
