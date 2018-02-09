@@ -6,23 +6,17 @@ source "$current_dir/global.sh"
 
 
 output "Starting..."
-output "Configured engines: $(echo ${engines[@]})"
+output "Configured engines: $(echo ${BIG_BENCH_DEFAULT_ENGINE})"
 output "Configured queries: $(echo ${queries[@]})"
 
 $bigbench_dir/bin/bigBench cleanLogs -U
 hdfs dfs -mkdir hdfs://141.2.2.172/user/user1/benchmarks/bigbench/stats
 
-for engine in "${engines[@]}"
+for query in "${queries[@]}"
 do
-
-  for query in "${queries[@]}"
-  do
     output "Executing query '$query' (Engine: '$engine')..."
 
-    $bigbench_dir/bin/bigBench runQuery -e $engine -q $query -m 8 -U
-
-  done
-
+    $bigbench_dir/bin/bigBench runQuery -q $query -m 8 -U
 done
 
 DATE=$(date +"%F_%H-%M-%S")
